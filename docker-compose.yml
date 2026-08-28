@@ -19,6 +19,7 @@ services:
     image: livekit/livekit-server:v1.8
     container_name: awsan_livekit
     command: --dev
+    restart: always
     ports:
       - "7880:7880"
       - "7881:7881"
