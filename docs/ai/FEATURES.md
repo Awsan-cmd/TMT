@@ -1,6 +1,8 @@
-# قائمة الميزات (Features)
+# قائمة الميزات (Features Matrix)
 
-- [COMPLETED] تأسيس المستودع ونظام الذاكرة الدائمة `docs/ai/`.
-- [IN PROGRESS] إعداد وتشغيل حاويات Docker لـ LiveKit و n8n.
-- [PLANNED] ربط n8n مع Google Sheets / Calendar / Contacts.
-- [PLANNED] إنشاء وكيل تفاعلي صوتي (Voice AI Agent) للرد على الاتصالات عبر الهاتف.
+- [x] **تأسيس نظام الذاكرة الدائمة والهيكلة**: إعداد `AGENTS.md` وكافة ملفات `docs/ai/`.
+- [x] **إعداد خدمات Docker**: تشغيل LiveKit و n8n وفحص تكامل المنافذ وعدم وجود تعارضات.
+- [x] **تطوير الوكيل الصوتي التفاعلي**: إنشاء `agent.py` لدعم محادثات الصوت باللغة العربية وتكامل Webhook مع n8n.
+- [ ] **إعداد سير العمل في n8n**: بناء Webhook endpoint وتوصيلها بـ Google Services (Calendar, Sheets, Contacts).
+- [ ] **دعم بوابة SIP للاتصال هاتفي**: الربط مع مزودي خدمة الاتصالات الهاتفية لنقل المكالمات المباشرة إلى LiveKit.
+- [ ] **لوحة متابعة واستفسارات القنوات المتعددة**: دعم WhatsApp / Telegram عبر n8n.

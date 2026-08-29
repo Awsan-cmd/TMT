@@ -1,0 +1,6 @@
+
+## البروتوكولات والمنافذ المستعملة
+- **LiveKit HTTP/WebSocket Signal**: منفذ `7880`.
+- **LiveKit RTC/TCP**: منفذ `7881`.
+- **LiveKit RTC/UDP**: منفذ `7882`.
+- **n8n Webhook HTTP**: منفذ `5678`.
