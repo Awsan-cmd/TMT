@@ -1,10 +1,10 @@
 # الحالة الحالية للمشروع (Current State)
 
-- **المرحلة**: إعداد ملفات Gradle Wrapper (الإصدار 6.5) لبوابة الأندرويد (Android Gateway).
+- **المرحلة**: تصحيح وتوافق إعدادات البناء في `android-gateway/build.gradle` مع Gradle 6.5.
 - **الخدمات المشغلة**:
   - حاوية LiveKit Server (المنافذ: 7880, 7881, 7882/udp) - **تعمل بنجاح (Healthy)**.
   - حاوية n8n Automation Engine (المنفذ: 5678) - **تعمل بنجاح (Healthy)**.
 - **آخر ميزة تم إنجازها**:
-  - إنشاء ملفات `gradlew`, `gradlew.bat`, و `gradle/wrapper/gradle-wrapper.properties` المتوافقة مع Gradle 6.5 لتسهيل بناء تطبيق الأندرويد لهاتف Galaxy S5 (API 23).
-- **الميزة الحالية / القادمة**: تشغيل البناء باستخدام `./gradlew assembleDebug`.
+  - تحديث نسخة أداة بناء الأندرويد في `buildscript` إلى `4.1.3` لتتوافق تماماً مع إصدار Gradle 6.5 وتفادي أخطاء الـ Build.
+- **الميزة الحالية / القادمة**: تنفيذ البناء المحلي باستخدام `./gradlew assembleDebug`.
 - **حالة الاختبارات**: جاهز للاختبار.

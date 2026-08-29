@@ -1,5 +1,12 @@
 # سجل التغييرات التاريخي (CHANGELOG)
 
+## [2026-08-28] - تحديث وتوافق إصدارات Gradle والبناء لبوابة الأندرويد
+- **المهمة**: تصحيح إعدادات البناء في `android-gateway/build.gradle` لضمان التوافق مع Gradle 6.5.
+- **الملفات المتأثرة**: `android-gateway/build.gradle`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
+- **التغيير**:
+  - تحديث `com.android.tools.build:gradle` إلى النسخة `4.1.3` لدعم التشغيل السلس مع Gradle 6.5 وتفادي فشل البناء.
+  - تحديث الذاكرة الدائمة للمشروع.
+
 ## [2026-08-28] - إضافة Gradle Wrapper (الإصدار 6.5) لبوابة الأندرويد
 - **المهمة**: توفير ملفات التشغيل والتحكم بـ Gradle لمشروع الأندرويد.
 - **الملفات المتأثرة**: `android-gateway/gradlew`, `android-gateway/gradlew.bat`, `android-gateway/gradle/wrapper/gradle-wrapper.properties`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
