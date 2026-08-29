@@ -6,7 +6,7 @@ import android.os.IBinder;
 import androidx.annotation.Nullable;
 
 public class LiveKitBridgeService extends Service {
-    private static final String LIVEKIT_URL = "ws://192.168.1.50:7880";
+    private static final String LIVEKIT_URL = "ws://192.168.1.103:7880";
 
     @Nullable
     @Override
@@ -16,7 +16,7 @@ public class LiveKitBridgeService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        // تهيئة اتصال LiveKit باستخدام العنوان ws://192.168.1.50:7880 وتوجيه الصوت هنا
+        // تهيئة اتصال LiveKit باستخدام العنوان ws://192.168.1.103:7880 وتوجيه الصوت هنا
         return START_STICKY;
     }
 }

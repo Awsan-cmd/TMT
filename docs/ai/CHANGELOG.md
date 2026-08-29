@@ -1,5 +1,12 @@
 # سجل التغييرات التاريخي (CHANGELOG)
 
+## [2026-08-28] - تحديث عنوان IP السيرفر في بوابة الأندرويد
+- **المهمة**: تعديل عناوين الاتصال لـ n8n و LiveKit في تطبيق الأندرويد لاستخدام `192.168.1.103`.
+- **الملفات المتأثرة**: `android-gateway/src/main/java/com/awsan/gateway/CallReceiver.java`, `android-gateway/src/main/java/com/awsan/gateway/LiveKitBridgeService.java`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
+- **التغيير**:
+  - استبدال عنوان IP القديم `192.168.1.50` بـ `192.168.1.103` لروابط الـ Webhooks لـ n8n وخادم LiveKit.
+  - تحديث الذاكرة الدائمة وحالة المشروع.
+
 ## [2026-08-28] - تشغيل الحاويات وتأكيد حالة الخدمات
 - **المهمة**: تشغيل الخدمات عبر `docker compose up -d --build` والتحقق من سلامة البيئة التشغيلية.
 - **الملفات المتأثرة**: `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.

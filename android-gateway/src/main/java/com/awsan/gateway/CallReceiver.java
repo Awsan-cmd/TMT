@@ -29,7 +29,7 @@ public class CallReceiver extends BroadcastReceiver {
         String json = "{\"number\":\"" + (number != null ? number : "unknown") + "\",\"state\":\"" + state + "\"}";
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
-                .url("http://192.168.1.50:5678/webhook/call-events")
+                .url("http://192.168.1.103:5678/webhook/call-events")
                 .post(body)
                 .build();
 
