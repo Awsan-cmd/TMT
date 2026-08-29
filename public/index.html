@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AwsanBot - لوحة التحكم الموحدة للمساعد الصوتي</title>
+    <style>
+        :root {
+            --primary-color: #0d9488;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-green: #22c55e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0d9488, #2563eb);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .status-badge {
+            background-color: rgba(34, 197, 94, 0.15);
+            color: var(--accent-green);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #0f766e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">AB</div>
+            <div class="brand-name">AwsanBot</div>
+        </div>
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            النظام متصل (LiveKit + n8n)
+        </div>
+    </header>
+
+    <main>
+        <h2>لوحة إدارة المساعد الصوتي والعيادات</h2>
+        <p style="color: var(--text-muted);">إدارة المواعيد والاتصالات الصوتية التفاعلية لنظام AwsanBot</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>حالة الصوت المباشر (LiveKit)</h3>
+                <p>خادم الصوت يعمل على المنفذ 7880.</p>
+                <button class="btn">اختبار الاتصال الصوتي</button>
+            </div>
+
+            <div class="card">
+                <h3>محرك الأتمتة (n8n)</h3>
+                <p>سير العمل متصل بالمنفذ 5678 لإدارة Google Calendar و Sheets.</p>
+                <button class="btn">فتح لوحة n8n</button>
+            </div>
+
+            <div class="card">
+                <h3>سجل المواعيد والرسائل</h3>
+                <p>استقبال ومعالجة طلبات حجز المواعيد عبر الوكيل الذكي (agent.py).</p>
+                <button class="btn">عرض سجل المواعيد</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
