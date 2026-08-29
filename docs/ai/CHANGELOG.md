@@ -1,5 +1,12 @@
 # سجل التغييرات التاريخي (CHANGELOG)
 
+## [2026-08-28] - إضافة Gradle Wrapper (الإصدار 6.5) لبوابة الأندرويد
+- **المهمة**: توفير ملفات التشغيل والتحكم بـ Gradle لمشروع الأندرويد.
+- **الملفات المتأثرة**: `android-gateway/gradlew`, `android-gateway/gradlew.bat`, `android-gateway/gradle/wrapper/gradle-wrapper.properties`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
+- **التغيير**:
+  - إنشاء `gradlew` و `gradlew.bat` وإعداد `gradle-wrapper.properties` لاستخدام Gradle 6.5.
+  - تحديث الذاكرة الدائمة وحالة المشروع.
+
 ## [2026-08-28] - إصلاح وتكوين build.gradle لبوابة الأندرويد
 - **المهمة**: تصحيح إعدادات البناء لـ `android-gateway/build.gradle` ودعم `assembleDebug`.
 - **الملفات المتأثرة**: `android-gateway/build.gradle`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
