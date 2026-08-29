@@ -20,7 +20,8 @@ jobs:
         distribution: 'temurin'
 
     - name: Make gradlew executable
-      run: chmod +x android-gateway/gradlew
+      run: chmod +x gradlew
+      working-directory: android-gateway
 
     - name: Build Debug APK
       run: ./gradlew assembleDebug --stacktrace
@@ -30,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-debug-apk
-        path: android-gateway/build/outputs/apk/debug/*.apk
+        path: android-gateway/app/build/outputs/apk/debug/*.apk
