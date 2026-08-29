@@ -1,0 +1,16 @@
+
+## تفاصيل المكونات والربط الشبكي
+1. **Android Gateway (Galaxy S5)**:
+   - يعمل على نظام Android 6.0 (API Level 23).
+   - يلتقط الأحداث عبر `BroadcastReceiver` عند استقبال مكالمة هاتفية.
+   - يرسل بيانات المتصل إلى n8n عبر HTTP Webhook.
+   - يدير التوافق الصوتي لنقل الصوت عبر WebRTC إلى LiveKit.
+
+2. **LiveKit Server & Agent**:
+   - يستقبل الاتصالات الصوتية ذات التأخير المنخفض (Low-Latency) على المنافذ `7880`, `7881`, `7882/udp`.
+   - يربط المحادثة مع `agent.py` المعالج بالذكاء الاصطناعي (OpenAI STT/LLM/TTS).
+
+3. **n8n Automation Engine**:
+   - يعمل على المنفذ `5678`.
+   - يتلقى طلبات إجراء العمليات (حجز موعد، استعلام) من `agent.py` وبوابة الأندرويد.
+   - يتكامل مع خدمات Google (Calendar, Sheets, Contacts).
