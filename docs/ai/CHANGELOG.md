@@ -1,5 +1,13 @@
 # سجل التغييرات التاريخي (CHANGELOG)
 
+## [2026-08-28] - فحص شامل وتحسين استقرار المشروع (Codebase Review & Optimization)
+- **المهمة**: إجراء فحص شامل لكافة ملفات الكود والبناء، وإصلاح خطأ سكريبت `gradlew.bat`.
+- **الملفات المتأثرة**: `android-gateway/gradlew.bat`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
+- **التغيير**:
+  - تصحيح استدعاء `jobEnd` غير المكتمل في ملف `android-gateway/gradlew.bat` إلى `goto globalEnd`.
+  - التحقق من سلامة تكوينات GitHub Actions (`build-apk.yml`) ومكتبات المشروع.
+  - تحديث الذاكرة الدائمة للمشروع.
+
 ## [2026-08-28] - تحديث وتطوير سير العمل في GitHub Actions
 - **المهمة**: تحديث ملف `.github/workflows/build-apk.yml` بالنسخ الأحدث لـ checkout و setup-java وضبط اسم الـ artifact.
 - **الملفات المتأثرة**: `.github/workflows/build-apk.yml`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.

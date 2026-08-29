@@ -57,4 +57,4 @@ if "%ERRORLEVEL%"=="0" goto globalEnd
 exit /b 1
 
 :globalEnd
-if "%ERRORLEVEL%"=="0" jobEnd
+if "%ERRORLEVEL%"=="0" goto globalEnd
