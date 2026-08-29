@@ -1,5 +1,13 @@
 # سجل التغييرات التاريخي (CHANGELOG)
 
+## [2026-08-28] - إصلاح وتكوين build.gradle لبوابة الأندرويد
+- **المهمة**: تصحيح إعدادات البناء لـ `android-gateway/build.gradle` ودعم `assembleDebug`.
+- **الملفات المتأثرة**: `android-gateway/build.gradle`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
+- **التغيير**:
+  - إضافة `buildscript` وإعداد مستودعات `google()` و `jcenter()`.
+  - تطبيق `com.android.application` وتحديد `compileSdkVersion 23` و `minSdkVersion 23` و `targetSdkVersion 23`.
+  - إضافة مستودع JitPack والاعتماديات لـ OkHttp و LiveKit SDK.
+
 ## [2026-08-28] - تحديث عنوان IP السيرفر في بوابة الأندرويد
 - **المهمة**: تعديل عناوين الاتصال لـ n8n و LiveKit في تطبيق الأندرويد لاستخدام `192.168.1.103`.
 - **الملفات المتأثرة**: `android-gateway/src/main/java/com/awsan/gateway/CallReceiver.java`, `android-gateway/src/main/java/com/awsan/gateway/LiveKitBridgeService.java`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
