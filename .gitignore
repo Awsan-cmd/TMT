@@ -1,1 +1,4 @@
 .aider*
+
+n8n_data/
+android-gateway/.gradle/
