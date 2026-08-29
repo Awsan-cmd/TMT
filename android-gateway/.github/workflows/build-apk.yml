@@ -20,15 +20,15 @@ jobs:
         distribution: 'temurin'
 
     - name: Make gradlew executable
-      run: chmod +x android-gateway/gradlew || chmod +x gradlew
+      run: chmod +x android-gateway/gradlew
 
     - name: Build Debug APK
       run: |
-        if [ -d "android-gateway" ]; then cd android-gateway; fi
+        cd android-gateway
         ./gradlew assembleDebug
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v3
       with:
         name: app-debug-apk
-        path: '**/build/outputs/apk/debug/*.apk'
+        path: android-gateway/build/outputs/apk/debug/*.apk
