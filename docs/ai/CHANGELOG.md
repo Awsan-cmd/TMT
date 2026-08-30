@@ -1,5 +1,13 @@
 # سجل التغييرات التاريخي (CHANGELOG)
 
+## [2026-08-28] - تحديث سير العمل لاستخدام JDK 11 لضمان توافق Gradle 6.5
+- **المهمة**: تحديث `.github/workflows/build-apk.yml` لضبط إصدار Java إلى 11 وإضافة خطوة التحقق من إصدار Gradle.
+- **الملفات المتأثرة**: `.github/workflows/build-apk.yml`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
+- **التغيير**:
+  - ضبط setup-java على JDK 11 (temurin) لدعم Gradle 6.5.
+  - إضافة خطوة `./gradlew --version` للتحقق من التوافق قبل البناء.
+  - تحديث الذاكرة الدائمة للمشروع.
+
 ## [2026-08-28] - فحص شامل وتحسين استقرار المشروع (Codebase Review & Optimization)
 - **المهمة**: إجراء فحص شامل لكافة ملفات الكود والبناء، وإصلاح خطأ سكريبت `gradlew.bat`.
 - **الملفات المتأثرة**: `android-gateway/gradlew.bat`, `docs/ai/CURRENT_STATE.md`, `docs/ai/CHANGELOG.md`.
