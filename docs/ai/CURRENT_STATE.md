@@ -1,11 +1,11 @@
 # الحالة الحالية للمشروع (Current State)
 
-- **المرحلة**: تحديث سير العمل في GitHub Actions لاستخدام JDK 11 لضمان التوافق مع Gradle 6.5.
+- **المرحلة**: إنشاء بيان تطبيق الأندرويد (`AndroidManifest.xml`) وتحديث تبعيات `build.gradle` ومسار أرتفكت البناء في GitHub Actions.
 - **الخدمات المشغلة**:
   - حاوية LiveKit Server (المنافذ: 7880, 7881, 7882/udp) - **تعمل بنجاح (Healthy)**.
   - حاوية n8n Automation Engine (المنفذ: 5678) - **تعمل بنجاح (Healthy)**.
 - **آخر ميزة تم إنجازها**:
-  - تحديث `.github/workflows/build-apk.yml` لتثبيت JDK 11 وإضافة خطوة التحقق من إصدار Gradle (`./gradlew --version`).
-- **الميزة الحالية / القادمة**: اختبار البناء الفعلي عبر GitHub Actions والتأكد من نجاح مخرجات الـ APK.
+  - ضبط هيكل `android-gateway` وإضافة `AndroidManifest.xml` وتحديث مسار المخرجات إلى `android-gateway/build/outputs/apk/debug/*.apk`.
+- **الميزة الحالية / القادمة**: التحقق من نجاح بناء الأندرويد عبر GitHub Actions والدفع إلى الفرع الرئيسي (`main`).
 - **حالة الاختبارات**: جاهز للاختبار.
 - **الفرع الحالي**: `main`
